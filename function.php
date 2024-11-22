@@ -5,8 +5,7 @@ class  ShopifyProduct{
 	
 	private $shopify_token = file_get_contents('shopify_access_token.txt');
 
-
-	function getProductBySKU($product_sku){
+function getProductBySKU($product_sku){
 		
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
@@ -72,7 +71,7 @@ class  ShopifyProduct{
 		  CURLOPT_FOLLOWLOCATION => true,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		  CURLOPT_CUSTOMREQUEST => 'POST',
-		  CURLOPT_POSTFIELDS => json_encode($images),
+		  CURLOPT_POSTFIELDS => json_encode(["image" => $images]),
 		  CURLOPT_HTTPHEADER => array(
 			'Content-Type: application/json',
 			'X-Shopify-Access-Token: ' . $this->shopify_token,
