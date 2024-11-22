@@ -1,5 +1,5 @@
 <?php
-
+echo "File Start";
 include "function.php";
 
 $ShopifyProduct = new ShopifyProduct();
@@ -242,3 +242,5 @@ file_put_contents($countFile, $nextStartCount);
 if ($nextStartCount >= $totalRecords) {
     echo 'All records processed.<br>';
 }
+
+echo "File End";
