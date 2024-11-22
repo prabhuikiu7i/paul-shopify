@@ -1,9 +1,16 @@
 <?php
 
 class  ShopifyProduct{
-	private $api_url = 'https://mr-motorcycles-nz.myshopify.com/admin/api/2024-10/';
-	
-	private $shopify_token = file_get_contents('shopify_access_token.txt');
+private $api_url = 'https://mr-motorcycles-nz.myshopify.com/admin/api/2024-10/';
+private $shopify_token;
+
+public function __construct() {
+  $this->shopify_token = file_get_contents(__DIR__ . '\shopify_access_token.txt');
+}
+
+public function getShopifyToken() {
+   return $this->shopify_token;
+}
 
 function getProductBySKU($product_sku){
 		
