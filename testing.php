@@ -8,10 +8,13 @@ $currentDateTime = new DateTime("now", new DateTimeZone("Asia/Kolkata"));
 $data = file_get_contents('crownkiwi-api.jsp.json');
 $array_data = json_decode($data,true);
 
-
 $countFile = 'count.txt';
-$latestAuditLog = file_get_contents($countFile);
-$startCount = $latestAuditLog ? (int)$latestAuditLog : 0;
+if (file_exists($countFile)) {
+    $latestAuditLog = file_get_contents($countFile);
+    $startCount = $latestAuditLog ? (int)$latestAuditLog : 0;
+} else {
+    $startCount = 0;
+}
 
 $processedDataFile = 'processed_data.json';
 $processedData = [];
