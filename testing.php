@@ -2,7 +2,6 @@
 require "function.php";
 
 $ShopifyProduct = new ShopifyProduct();
-
 $currentDateTime = new DateTime("now", new DateTimeZone("Asia/Kolkata"));
 
 $data = file_get_contents('crownkiwi-api.jsp.json');
