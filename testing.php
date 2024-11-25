@@ -18,7 +18,7 @@ if (file_exists($countFile)) {
     $startCount = 0;
 }
 
-$batchSize = 1;
+$batchSize = 15;
 $totalRecords = count($array_data);
 
 if ($totalRecords == 0) {
@@ -55,7 +55,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			 $last_part = $sku_parts[4];
 		}
 
-			$imageSrcArray = $product['Image Src']; 
+			/*$imageSrcArray = $product['Image Src']; 
 			foreach($imageSrcArray as $imageURL){
 				$fileName = basename(parse_url($imageURL, PHP_URL_PATH));
 
@@ -66,7 +66,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 				} else {
 					echo "Failed to retrieve the image.";
 				}
-			}
+			}*/
 
 		$getProductBySKU = $ShopifyProduct->getProductBySKU($product_sku);
 
@@ -120,13 +120,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"title" => $product_title,
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
-							"status" => "draft", 
-							"images" => [
-								[
-									"attachment" => $base64Image,
-									"filename" => $fileName
-								]
-							]
+							"status" => "draft"
 						]
 					];
 
@@ -182,13 +176,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"title" => $product_title,
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
-							"status" => "draft", 
-							"images" => [
-								[
-									"attachment" => $base64Image,
-									"filename" => $fileName
-								]
-							]
+							"status" => "draft"
 						]
 					];
 
