@@ -54,22 +54,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			 $last_part = $sku_parts[4];
 		}
 
-
-			$imageSrcArray = "https://shopmrmoto.co.nz/cdn/shop/files/50005-00032.jpg";
-			
-				$fileName = basename(parse_url($imageSrcArray, PHP_URL_PATH));
-
-				$imageContent = file_get_contents($imageSrcArray);
-					
-				if ($imageContent !== false) {
-					$base64Image = base64_encode($imageContent);
-				} else {
-					echo "Failed to retrieve the image.";
-				}
-
-
-
-			/*$imageSrcArray = $product['Image Src']; 
+			$imageSrcArray = $product['Image Src']; 
 			foreach($imageSrcArray as $imageURL){
 				$fileName = basename(parse_url($imageURL, PHP_URL_PATH));
 
@@ -77,11 +62,10 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 					
 				if ($imageContent !== false) {
 					$base64Image = base64_encode($imageContent);
-					echo $base64Image;
 				} else {
 					echo "Failed to retrieve the image.";
 				}
-			}*/
+			}
 
 		$getProductBySKU = $ShopifyProduct->getProductBySKU($product_sku);
 
