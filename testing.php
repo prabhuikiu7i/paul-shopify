@@ -1,11 +1,11 @@
 <?php
-include "function.php";
+require "function.php";
 
 $ShopifyProduct = new ShopifyProduct();
 
 $currentDateTime = new DateTime("now", new DateTimeZone("Asia/Kolkata"));
 
-$data = file_get_contents(__DIR__ . '\crownkiwi-api.jsp.json');
+$data = file_get_contents('crownkiwi-api.jsp.json');
 $array_data = json_decode($data,true);
 
 $countFile = 'count.txt';
@@ -18,21 +18,18 @@ if (file_exists($countFile)) {
     $startCount = 0;
 }
 
-$processedDataFile = __DIR__ . DIRECTORY_SEPARATOR . 'processed_data.json';
-$processedData = [];
-
-if (file_exists($processedDataFile)) {
-    $processedData = json_decode(file_get_contents($processedDataFile), true);
-    if (!is_array($processedData)) {
-        $processedData = [];
-    }
-}
-
-$batchSize = 5;
+$batchSize = 1;
 $totalRecords = count($array_data);
 
 if ($totalRecords == 0) {
-    echo "No records available.";
+	$logEntries = [
+        [
+            "status" => "No records available.",
+            "timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+        ]
+    ];
+
+	file_put_contents('logs.txt', json_encode($logEntries, JSON_PRETTY_PRINT));
     exit;
 }
 
@@ -56,26 +53,36 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			$processed_sku = implode('-', array_slice($sku_parts, 0, 4));
 			 $last_part = $sku_parts[4];
 		}
-		// testing 
 
 
-		/* $imageSrcArray = $product['Image Src']; 
-		$images = [];
+			$imageSrcArray = "https://shopmrmoto.co.nz/cdn/shop/files/50005-00032.jpg";
+			
+				$fileName = basename(parse_url($imageSrcArray, PHP_URL_PATH));
 
-		foreach ($imageSrcArray as $index => $src) {
-			$images[] = ["src" => $src]; 
-		}
-		$data = json_encode(["image" => $images]);
+				$imageContent = file_get_contents($imageSrcArray);
+					
+				if ($imageContent !== false) {
+					$base64Image = base64_encode($imageContent);
+				} else {
+					echo "Failed to retrieve the image.";
+				}
 
-		echo $data . "<br>"; */
 
-	
-		$imageSrcArray = "https://shopmrmoto.co.nz/cdn/shop/files/50005-00032.jpg"; 
 
-		$images = [
-			"src" => $imageSrcArray
-		]; 
-		
+			/*$imageSrcArray = $product['Image Src']; 
+			foreach($imageSrcArray as $imageURL){
+				$fileName = basename(parse_url($imageURL, PHP_URL_PATH));
+
+				$imageContent = file_get_contents($imageURL);
+					
+				if ($imageContent !== false) {
+					$base64Image = base64_encode($imageContent);
+					echo $base64Image;
+				} else {
+					echo "Failed to retrieve the image.";
+				}
+			}*/
+
 		$getProductBySKU = $ShopifyProduct->getProductBySKU($product_sku);
 
 		if (isset($getProductBySKU['data']['productVariants']['edges']) && count($getProductBySKU['data']['productVariants']['edges']) > 0) {
@@ -104,15 +111,14 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 						];
 
 						$updateStockResponse = $ShopifyProduct->updateStockIfProductExist($variantStock);
-						echo "<br>";
-						echo "Stocks Updated Successfully!!";
-						$logData = "======================= Stock Updated =======================\n" .
-							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
-							"SKU: $product_sku\n" .
-							"Inventory Item ID: $inventoryItemId\n" .
-							"Response: " . json_encode($updateStockResponse) . "\n" .
-							"=====================================================================\n";
-						file_put_contents("stock_updated.txt", $logData, FILE_APPEND);
+
+						$logEntries[] = [
+							"status" => "Stock Updated Successfully.",
+							"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+							"sku" => $product_sku,
+							"inventory_item_id" => $inventoryItemId,
+							"response" => $updateStockResponse
+						];
 
 						break;
 					}
@@ -130,16 +136,23 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
 							"status" => "draft", 
+							"images" => [
+								[
+									"attachment" => $base64Image,
+									"filename" => $fileName
+								]
+							]
 						]
 					];
+
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
+
+					echo "<pre>";
+					print_r($createProductResponse);
+					echo "</pre>";
 					
 					if (isset($createProductResponse['product']['id'])) {
-						
 						$productId = $createProductResponse['product']['id'];
-						
-						$saveImageResponse = $ShopifyProduct->saveImage($productId,$images);
-						
 						$newVariantData = [
 							"variant" => [
 								"sku" => $product_sku,	
@@ -165,15 +178,15 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							];
 							$addVariantStockResponse = $ShopifyProduct->addVariantStock($variantStock);
 							
-							$logData = "======================= Variant Created =======================\n" .
-								$currentDateTime->format("Y-m-d H:i:s") . "\n" .
-								"Title: $product_title\n" .
-								"SKU: $product_sku\n" .
-								"Product ID: $productId\n" .
-								"Variant Response: " . json_encode($createVariantResponse) . "\n" .
-								"Stock Update Response: " . json_encode($addVariantStockResponse) . "\n" .
-								"=====================================================================\n";
-							file_put_contents("variant_created.txt", $logData, FILE_APPEND);
+							$logEntries[] = [
+								"status" => "Variant Created",
+								"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+								"title" => $product_title,
+								"sku" => $product_sku,
+								"product_id" => $productId,
+								"variant_response" => $createVariantResponse,
+								"stock_update_response" => $addVariantStockResponse
+							];
 						}
 					}
 			} else {
@@ -185,20 +198,24 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
 							"status" => "draft", 
+							"images" => [
+								[
+									"attachment" => $base64Image,
+									"filename" => $fileName
+								]
+							]
 						]
 					];
+
+
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
+
+					echo "<pre>";
+					print_r($createProductResponse);
+					echo "</pre>";
+					
 					if(isset($createProductResponse['product']['id'])) {
 						$productId = $createProductResponse['product']['id'];
-						
-						$saveImageResponse = $ShopifyProduct->saveImage($productId,$images);
-						echo "<hr>";
-						echo "image respone !";
-						echo "<pre>";
-						print_r($saveImageResponse);
-						echo "</pre>";
-						echo "<hr>";
-						
 						
 						if (isset($createProductResponse['product']['variants']) && count($createProductResponse['product']['variants']) > 0) {
 							foreach ($createProductResponse['product']['variants'] as $variant) {
@@ -224,30 +241,20 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 					} else {
 						echo "Product ID not found!";
 					}
-					$logData = "======================= Single Product Created =======================\n" .
-						$currentDateTime->format("Y-m-d H:i:s") . "\n" .
-						"Title: $product_title\n" .
-						"SKU: $product_sku\n" .
-						"Product ID: " . (isset($productId) ? $productId : 'Not Found') . "\n" .
-						"Create Product Response: " . json_encode($createProductResponse, JSON_PRETTY_PRINT) . "\n" .
-						"Product Price Response: " . json_encode($productPriceResponse, JSON_PRETTY_PRINT) . "\n" .
-						"=====================================================================\n";
-					file_put_contents(__DIR__ . "\single_product_created.txt", $logData, FILE_APPEND);
+
+					$logEntries[] = [
+						"status" => "Single Product Created Successfully.",
+						"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+						"sku" => $product_sku,
+						"product_id" => $productId,
+						"response" => $createProductResponse,
+						"Product Price" => $productPriceResponse,
+					];
 			}
 		}
-    $processedData[] = [
-        'title' => $product_title,
-        'sku' => $product_sku,
-        'body (HTML)' => $product['Body (HTML)'],
-        'quantity' => $product_qty,
-        'price' => $product['rrp'],
-        'cost' => $product['Cost'],
-        'category' => $product['Cat'],
-        'images' => $product['Image Src']
-    ];
 }
 
-file_put_contents($processedDataFile, json_encode($processedData, JSON_PRETTY_PRINT));
+file_put_contents('logs.txt', json_encode($logEntries, JSON_PRETTY_PRINT) . PHP_EOL, FILE_APPEND);
 
 $nextStartCount = $startCount + $batchSize;
 file_put_contents($countFilePath, $nextStartCount);
@@ -255,4 +262,3 @@ file_put_contents($countFilePath, $nextStartCount);
 if ($nextStartCount >= $totalRecords) {
     echo 'All records processed.<br>';
 }
-
