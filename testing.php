@@ -15,7 +15,7 @@ if (file_exists($countFile)) {
 } else {
     $startCount = 0;
 }
-
+/* Save all respone after saved in processed_data.josn */
 $processedDataFile = 'processed_data.json';
 $processedData = [];
 
