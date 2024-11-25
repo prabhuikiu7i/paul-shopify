@@ -5,18 +5,20 @@ $ShopifyProduct = new ShopifyProduct();
 
 $currentDateTime = new DateTime("now", new DateTimeZone("Asia/Kolkata"));
 
-$data = file_get_contents('crownkiwi-api.jsp.json');
+$data = file_get_contents(__DIR__ . '\crownkiwi-api.jsp.json');
 $array_data = json_decode($data,true);
 
 $countFile = 'count.txt';
+$countFilePath = __DIR__ . DIRECTORY_SEPARATOR . $countFile;
+
 if (file_exists($countFile)) {
     $latestAuditLog = file_get_contents($countFile);
     $startCount = $latestAuditLog ? (int)$latestAuditLog : 0;
 } else {
     $startCount = 0;
 }
-/* Save all respone after saved in processed_data.josn */
-$processedDataFile = 'processed_data.json';
+
+$processedDataFile = __DIR__ . DIRECTORY_SEPARATOR . 'processed_data.json';
 $processedData = [];
 
 if (file_exists($processedDataFile)) {
@@ -42,20 +44,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 		$product_title = $product['ItemName'];
 		$product_sku = $product['SKU'];
 		$product_qty = $product['Qty'];
-		
-		$isProcessed = false;
-		foreach ($processedData as $processedItem) {
-			if ($processedItem['sku'] === $product_sku) {
-				$isProcessed = true;
-				break;
-			}
-		}
 
-		if ($isProcessed) {
-			echo "Skipping already processed product: $product_title ($product_sku)<br>";
-			continue;
-		}
-		
 		$sku_parts = explode('-', $product_sku);
 		$processed_sku = '';
 		$last_part = '';
@@ -67,7 +56,9 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			$processed_sku = implode('-', array_slice($sku_parts, 0, 4));
 			 $last_part = $sku_parts[4];
 		}
-		
+		// testing 
+
+
 		/* $imageSrcArray = $product['Image Src']; 
 		$images = [];
 
@@ -241,7 +232,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 						"Create Product Response: " . json_encode($createProductResponse, JSON_PRETTY_PRINT) . "\n" .
 						"Product Price Response: " . json_encode($productPriceResponse, JSON_PRETTY_PRINT) . "\n" .
 						"=====================================================================\n";
-					file_put_contents("single_product_created.txt", $logData, FILE_APPEND);
+					file_put_contents(__DIR__ . "\single_product_created.txt", $logData, FILE_APPEND);
 			}
 		}
     $processedData[] = [
@@ -259,7 +250,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 file_put_contents($processedDataFile, json_encode($processedData, JSON_PRETTY_PRINT));
 
 $nextStartCount = $startCount + $batchSize;
-file_put_contents($countFile, $nextStartCount);
+file_put_contents($countFilePath, $nextStartCount);
 
 if ($nextStartCount >= $totalRecords) {
     echo 'All records processed.<br>';
