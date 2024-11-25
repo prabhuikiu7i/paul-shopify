@@ -39,7 +39,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 	$counter = 0;
 	$productPriceResponse = 0;
 	foreach($batchToProcess as $product){
-		$product_title = $product['ItemName'];
+		$product_title = $product['ItemName'];   
 		$product_sku = $product['SKU'];
 		$product_qty = $product['Qty'];
 
