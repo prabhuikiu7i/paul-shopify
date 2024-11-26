@@ -16,7 +16,7 @@ if (file_exists($countFile)) {
     $startCount = 0;
 }
 
-$batchSize = 15;
+$batchSize = 3;
 $totalRecords = count($array_data);
 
 if ($totalRecords == 0) {
@@ -63,21 +63,28 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			 $last_part = $sku_parts[4];
 		}
 
-		$imageSrcArray = $product['Image Src'];
-			$base64Images = [];  
-			$imageFilenames = [];
+			$imageSrcArray =  $product['Image Src'];
+			
+			$images = [];
+			
 			foreach ($imageSrcArray as $imageSrc) {
-				$fileName = basename($imageSrc);
-				$imageData = file_get_contents($imageSrc);
+				$fileName = basename($imageSrc);  
+				$imageData = file_get_contents($imageSrc); 
+				
 				if ($imageData !== false) {
-					$base64Encoded = base64_encode($imageData);
-					$base64Images[] = $base64Encoded;
-					$imageFilenames[] = $fileName;
+					$base64Encoded = base64_encode($imageData); 
+					$images[] = [
+						"filename" => $fileName,
+						"attachment" => $base64Encoded
+					];
 				} else {
-					$base64Images[] = 'Image could not be fetched: ' . $imageSrc;
+					$logEntries[] = [
+						"status" => "Image could not be fetched.",
+						"message" => "Image could not be fetched: " . $imageSrc,
+					];
 				}
-			}
-
+			} 
+	
 		$getProductBySKU = $ShopifyProduct->getProductBySKU($product_sku);
 
 		if (isset($getProductBySKU['data']['productVariants']['edges']) && count($getProductBySKU['data']['productVariants']['edges']) > 0) {
@@ -146,17 +153,10 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
 							"status" => "draft",
-							"images" => []
+							"images" => $images
 						]
 					];
-
-					foreach ($base64Images as $index => $base64Image) {
-						$newProductData['product']['images'][] = [
-							"attachment" => $base64Image, 
-							"filename" => $imageFilenames[$index]  
-						];
-					}
-
+					
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
 
 					if (isset($createProductResponse['product']['id'])) {
@@ -206,17 +206,9 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
 							"status" => "draft",
-							"images" => []
+							"images" => $images
 						]
 					];
-
-					foreach ($base64Images as $index => $base64Image) {
-						$newProductData['product']['images'][] = [
-							"attachment" => $base64Image, 
-							"filename" => $imageFilenames[$index]  
-						];
-					}
-
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
 
 					if(isset($createProductResponse['product']['id'])) {

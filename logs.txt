@@ -1,0 +1,1996 @@
+null
+null
+null
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-RPCK275",
+        "inventory_item_id": 46923207606505,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207606505,
+                "location_id": 61176086681,
+                "available": 4,
+                "updated_at": "2024-11-26T22:04:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207606505"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-RPCK301",
+        "inventory_item_id": 46923207835881,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207835881,
+                "location_id": 61176086681,
+                "available": 2,
+                "updated_at": "2024-11-26T22:04:34+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207835881"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-S1\/2",
+        "inventory_item_id": 46923208163561,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208163561,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:35+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208163561"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-S2\/1",
+        "inventory_item_id": 46923208392937,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208392937,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208392937"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-SA019",
+        "inventory_item_id": 47998960042217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 47998960042217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=47998960042217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-TT62",
+        "inventory_item_id": 46923208720617,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208720617,
+                "location_id": 61176086681,
+                "available": 5,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208720617"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-VST1AL",
+        "inventory_item_id": 46923208982761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208982761,
+                "location_id": 61176086681,
+                "available": 7,
+                "updated_at": "2024-11-26T22:04:37+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208982761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-VST2AL",
+        "inventory_item_id": 46923210522857,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210522857,
+                "location_id": 61176086681,
+                "available": 3,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210522857"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-P-X101",
+        "inventory_item_id": 46923210817769,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210817769,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:42+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210817769"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-S-A10SO13-RC",
+        "inventory_item_id": 46923213111529,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923213111529,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:17+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923213111529"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-S-A10SO9-RC",
+        "inventory_item_id": 46923215175913,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923215175913,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:50+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923215175913"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-S-A6R3-APLC",
+        "inventory_item_id": 46923216322793,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923216322793,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923216322793"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-S-A6SO1-HGJT",
+        "inventory_item_id": 46923217174761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923217174761,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923217174761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-S-B10R5-APLT",
+        "inventory_item_id": 46923219370217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923219370217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:53+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923219370217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:57:15",
+        "sku": "AK-S-B12SO14-HLGT",
+        "inventory_item_id": 46923220222185,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923220222185,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:56+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923220222185"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-RPCK275",
+        "inventory_item_id": 46923207606505,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207606505,
+                "location_id": 61176086681,
+                "available": 4,
+                "updated_at": "2024-11-26T22:04:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207606505"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-RPCK301",
+        "inventory_item_id": 46923207835881,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207835881,
+                "location_id": 61176086681,
+                "available": 2,
+                "updated_at": "2024-11-26T22:04:34+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207835881"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-S1\/2",
+        "inventory_item_id": 46923208163561,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208163561,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:35+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208163561"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-S2\/1",
+        "inventory_item_id": 46923208392937,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208392937,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208392937"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-SA019",
+        "inventory_item_id": 47998960042217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 47998960042217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=47998960042217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-TT62",
+        "inventory_item_id": 46923208720617,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208720617,
+                "location_id": 61176086681,
+                "available": 5,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208720617"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-VST1AL",
+        "inventory_item_id": 46923208982761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208982761,
+                "location_id": 61176086681,
+                "available": 7,
+                "updated_at": "2024-11-26T22:04:37+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208982761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-VST2AL",
+        "inventory_item_id": 46923210522857,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210522857,
+                "location_id": 61176086681,
+                "available": 3,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210522857"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-P-X101",
+        "inventory_item_id": 46923210817769,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210817769,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:42+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210817769"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-S-A10SO13-RC",
+        "inventory_item_id": 46923213111529,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923213111529,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:17+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923213111529"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-S-A10SO9-RC",
+        "inventory_item_id": 46923215175913,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923215175913,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:50+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923215175913"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-S-A6R3-APLC",
+        "inventory_item_id": 46923216322793,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923216322793,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923216322793"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-S-A6SO1-HGJT",
+        "inventory_item_id": 46923217174761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923217174761,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923217174761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-S-B10R5-APLT",
+        "inventory_item_id": 46923219370217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923219370217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:53+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923219370217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:44",
+        "sku": "AK-S-B12SO14-HLGT",
+        "inventory_item_id": 46923220222185,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923220222185,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:56+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923220222185"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-RPCK275",
+        "inventory_item_id": 46923207606505,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207606505,
+                "location_id": 61176086681,
+                "available": 4,
+                "updated_at": "2024-11-26T22:04:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207606505"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-RPCK301",
+        "inventory_item_id": 46923207835881,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207835881,
+                "location_id": 61176086681,
+                "available": 2,
+                "updated_at": "2024-11-26T22:04:34+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207835881"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-S1\/2",
+        "inventory_item_id": 46923208163561,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208163561,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:35+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208163561"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-S2\/1",
+        "inventory_item_id": 46923208392937,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208392937,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208392937"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-SA019",
+        "inventory_item_id": 47998960042217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 47998960042217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=47998960042217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-TT62",
+        "inventory_item_id": 46923208720617,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208720617,
+                "location_id": 61176086681,
+                "available": 5,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208720617"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-VST1AL",
+        "inventory_item_id": 46923208982761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208982761,
+                "location_id": 61176086681,
+                "available": 7,
+                "updated_at": "2024-11-26T22:04:37+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208982761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-VST2AL",
+        "inventory_item_id": 46923210522857,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210522857,
+                "location_id": 61176086681,
+                "available": 3,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210522857"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-P-X101",
+        "inventory_item_id": 46923210817769,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210817769,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:42+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210817769"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-S-A10SO13-RC",
+        "inventory_item_id": 46923213111529,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923213111529,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:17+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923213111529"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-S-A10SO9-RC",
+        "inventory_item_id": 46923215175913,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923215175913,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:50+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923215175913"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-S-A6R3-APLC",
+        "inventory_item_id": 46923216322793,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923216322793,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923216322793"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-S-A6SO1-HGJT",
+        "inventory_item_id": 46923217174761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923217174761,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923217174761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-S-B10R5-APLT",
+        "inventory_item_id": 46923219370217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923219370217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:53+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923219370217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 16:58:53",
+        "sku": "AK-S-B12SO14-HLGT",
+        "inventory_item_id": 46923220222185,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923220222185,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:56+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923220222185"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-RPCK275",
+        "inventory_item_id": 46923207606505,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207606505,
+                "location_id": 61176086681,
+                "available": 4,
+                "updated_at": "2024-11-26T22:04:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207606505"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-RPCK301",
+        "inventory_item_id": 46923207835881,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923207835881,
+                "location_id": 61176086681,
+                "available": 2,
+                "updated_at": "2024-11-26T22:04:34+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923207835881"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-S1\/2",
+        "inventory_item_id": 46923208163561,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208163561,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:35+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208163561"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-S2\/1",
+        "inventory_item_id": 46923208392937,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208392937,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:46:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208392937"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-SA019",
+        "inventory_item_id": 47998960042217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 47998960042217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=47998960042217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-TT62",
+        "inventory_item_id": 46923208720617,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208720617,
+                "location_id": 61176086681,
+                "available": 5,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208720617"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-VST1AL",
+        "inventory_item_id": 46923208982761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923208982761,
+                "location_id": 61176086681,
+                "available": 7,
+                "updated_at": "2024-11-26T22:04:37+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923208982761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-VST2AL",
+        "inventory_item_id": 46923210522857,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210522857,
+                "location_id": 61176086681,
+                "available": 3,
+                "updated_at": "2024-11-26T22:04:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210522857"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-P-X101",
+        "inventory_item_id": 46923210817769,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923210817769,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:42+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923210817769"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-S-A10SO13-RC",
+        "inventory_item_id": 46923213111529,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923213111529,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:17+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923213111529"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-S-A10SO9-RC",
+        "inventory_item_id": 46923215175913,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923215175913,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:47:50+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923215175913"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-S-A6R3-APLC",
+        "inventory_item_id": 46923216322793,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923216322793,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923216322793"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-S-A6SO1-HGJT",
+        "inventory_item_id": 46923217174761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923217174761,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:52+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923217174761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-S-B10R5-APLT",
+        "inventory_item_id": 46923219370217,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923219370217,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:53+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923219370217"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:00:35",
+        "sku": "AK-S-B12SO14-HLGT",
+        "inventory_item_id": 46923220222185,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923220222185,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:04:56+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923220222185"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B12SO23-HAATBL",
+        "inventory_item_id": 46923227169001,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923227169001,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923227169001"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B13SO4-HJGT",
+        "inventory_item_id": 48902657900777,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 48902657900777,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=48902657900777"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B13SO4-HJGTBL",
+        "inventory_item_id": 48902661046505,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 48902661046505,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:42+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=48902661046505"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B3R1-RC\/1",
+        "inventory_item_id": 46923228905705,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923228905705,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:41+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923228905705"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B8SO6-HZAABL",
+        "inventory_item_id": 46923229954281,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923229954281,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:06+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923229954281"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B8SO8-HFBFCTBL",
+        "inventory_item_id": 46923231592681,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923231592681,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:06+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923231592681"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-B9SO2-APC",
+        "inventory_item_id": 46923233558761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923233558761,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:11+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923233558761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-CF4SO1-APC",
+        "inventory_item_id": 50047523094761,
+        "response": {
+            "errors": [
+                "Inventory item does not have inventory tracking enabled"
+            ]
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-D12SO8-RTBL",
+        "inventory_item_id": 46923235262697,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923235262697,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:20+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923235262697"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-D8SO2-HRBL",
+        "inventory_item_id": 46923236212969,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923236212969,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923236212969"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:02:22",
+        "sku": "AK-S-D8SO4-CUBTBL\/1",
+        "inventory_item_id": 46923242242281,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923242242281,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923242242281"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B12SO23-HAATBL",
+        "inventory_item_id": 46923227169001,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923227169001,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923227169001"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B13SO4-HJGT",
+        "inventory_item_id": 48902657900777,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 48902657900777,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=48902657900777"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B13SO4-HJGTBL",
+        "inventory_item_id": 48902661046505,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 48902661046505,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:42+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=48902661046505"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B3R1-RC\/1",
+        "inventory_item_id": 46923228905705,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923228905705,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:41+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923228905705"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B8SO6-HZAABL",
+        "inventory_item_id": 46923229954281,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923229954281,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:06+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923229954281"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B8SO8-HFBFCTBL",
+        "inventory_item_id": 46923231592681,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923231592681,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:06+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923231592681"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-B9SO2-APC",
+        "inventory_item_id": 46923233558761,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923233558761,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:11+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923233558761"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-CF4SO1-APC",
+        "inventory_item_id": 50047523094761,
+        "response": {
+            "errors": [
+                "Inventory item does not have inventory tracking enabled"
+            ]
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-D12SO8-RTBL",
+        "inventory_item_id": 46923235262697,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923235262697,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:20+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923235262697"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-D8SO2-HRBL",
+        "inventory_item_id": 46923236212969,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923236212969,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923236212969"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:05:44",
+        "sku": "AK-S-D8SO4-CUBTBL\/1",
+        "inventory_item_id": 46923242242281,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923242242281,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:06:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923242242281"
+            }
+        }
+    }
+]
+null
+null
+null
+null
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:29:53",
+        "sku": "AK-S-B12SO16-HAABL",
+        "inventory_item_id": 50047568806121,
+        "response": {
+            "errors": [
+                "Inventory item does not have inventory tracking enabled"
+            ]
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:29:53",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:29:53",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:30:41",
+        "sku": "AK-S-B12SO23-HAATBL",
+        "inventory_item_id": 46923227169001,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923227169001,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923227169001"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:30:41",
+        "sku": "AK-S-B12SO25-HISSSBL",
+        "inventory_item_id": 50047569232105,
+        "response": {
+            "errors": [
+                "Inventory item does not have inventory tracking enabled"
+            ]
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:30:41",
+        "sku": "AK-S-B13SO4-HJGT",
+        "inventory_item_id": 48902657900777,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 48902657900777,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:36+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=48902657900777"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Single Product Created Successfully.",
+        "timestamp": "2024-11-26 17:32:19",
+        "sku": "AK-S-B12SO16-HAABL",
+        "product_id": 8802936226025,
+        "response": {
+            "product": {
+                "id": 8802936226025,
+                "title": "Slip On Muffler BMW R1200GS",
+                "body_html": "Slip-Ons represent the first step in the exhaust system tuning process, and they offer a great balance between price and performance. Change the nature of your bike by adding more power, improved performance, and the unique Akrapovi\u010d sound. Everything packed in stylishly designed Slip-On exhaust systems. The result of taking design very seriously is a beautifully crafted exhaust system.The muffler outer sleeve is made of titanium, while the end cap is made of carbon fibre. Race-proven materials. Exhaust system is compatible with BMW side cases.\r\n\r\nWhen adding the optional header set, the carbon fibre heat shield can not be mounted.",
+                "vendor": "MR Motorcycles Ltd",
+                "product_type": "AKRAPOVIC - BMW",
+                "created_at": "2024-11-27T01:02:30+13:00",
+                "handle": "slip-on-muffler-bmw-r1200gs",
+                "updated_at": "2024-11-27T01:02:30+13:00",
+                "published_at": null,
+                "template_suffix": null,
+                "published_scope": "web",
+                "tags": "",
+                "status": "draft",
+                "admin_graphql_api_id": "gid:\/\/shopify\/Product\/8802936226025",
+                "variants": [
+                    {
+                        "id": 47946849943785,
+                        "product_id": 8802936226025,
+                        "title": "Default Title",
+                        "price": "0.00",
+                        "position": 1,
+                        "inventory_policy": "deny",
+                        "compare_at_price": null,
+                        "option1": "Default Title",
+                        "option2": null,
+                        "option3": null,
+                        "created_at": "2024-11-27T01:02:30+13:00",
+                        "updated_at": "2024-11-27T01:02:30+13:00",
+                        "taxable": true,
+                        "barcode": null,
+                        "fulfillment_service": "manual",
+                        "grams": 0,
+                        "inventory_management": null,
+                        "requires_shipping": true,
+                        "sku": "",
+                        "weight": 0,
+                        "weight_unit": "kg",
+                        "inventory_item_id": 50047576015081,
+                        "inventory_quantity": 0,
+                        "old_inventory_quantity": 0,
+                        "admin_graphql_api_id": "gid:\/\/shopify\/ProductVariant\/47946849943785",
+                        "image_id": null
+                    }
+                ],
+                "options": [
+                    {
+                        "id": 11088374956265,
+                        "product_id": 8802936226025,
+                        "name": "Title",
+                        "position": 1,
+                        "values": [
+                            "Default Title"
+                        ]
+                    }
+                ],
+                "images": [],
+                "image": null
+            }
+        },
+        "Product Price": {
+            "variant": {
+                "id": 47946849943785,
+                "product_id": 8802936226025,
+                "title": "Default Title",
+                "price": "2639.89",
+                "position": 1,
+                "inventory_policy": "deny",
+                "compare_at_price": null,
+                "option1": "Default Title",
+                "option2": null,
+                "option3": null,
+                "created_at": "2024-11-27T01:02:30+13:00",
+                "updated_at": "2024-11-27T01:02:31+13:00",
+                "taxable": true,
+                "barcode": null,
+                "fulfillment_service": "manual",
+                "grams": 0,
+                "inventory_management": null,
+                "requires_shipping": true,
+                "sku": "AK-S-B12SO16-HAABL",
+                "weight": 0,
+                "weight_unit": "kg",
+                "inventory_item_id": 50047576015081,
+                "inventory_quantity": 0,
+                "old_inventory_quantity": 0,
+                "admin_graphql_api_id": "gid:\/\/shopify\/ProductVariant\/47946849943785",
+                "image_id": null
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:32:19",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:32:19",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:34:39",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:34:39",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:35:41",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:35:41",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:38:06",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:38:06",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:40:04",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:40:04",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:41:46",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:41:46",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:54:36",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:54:36",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:57:02",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:57:02",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:59:21",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 17:59:21",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:03:38",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:03:38",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:08:09",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:08:09",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:11:33",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:11:33",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:27:12",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:27:12",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:30:16",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:30:16",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:33:53",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:33:53",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
+[
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:34:36",
+        "sku": "AK-S-B12SO22-HALAGTBL",
+        "inventory_item_id": 46923224482025,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923224482025,
+                "location_id": 61176086681,
+                "available": 0,
+                "updated_at": "2023-05-29T11:49:39+12:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923224482025"
+            }
+        }
+    },
+    {
+        "status": "Stock Updated Successfully.",
+        "timestamp": "2024-11-26 18:34:36",
+        "sku": "AK-S-B12SO23-HAAT",
+        "inventory_item_id": 46923226218729,
+        "response": {
+            "inventory_level": {
+                "inventory_item_id": 46923226218729,
+                "location_id": 61176086681,
+                "available": 1,
+                "updated_at": "2024-11-26T22:05:26+13:00",
+                "admin_graphql_api_id": "gid:\/\/shopify\/InventoryLevel\/95501779097?inventory_item_id=46923226218729"
+            }
+        }
+    }
+]
