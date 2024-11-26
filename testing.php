@@ -8,7 +8,6 @@ $data = file_get_contents('crownkiwi-api.jsp.json');
 $array_data = json_decode($data,true);
 
 $countFile = 'count.txt';
-$countFilePath = __DIR__ . DIRECTORY_SEPARATOR . $countFile;
 
 if (file_exists($countFile)) {
     $latestAuditLog = file_get_contents($countFile);
@@ -275,7 +274,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 file_put_contents('logs.txt', json_encode($logEntries, JSON_PRETTY_PRINT) . PHP_EOL, FILE_APPEND);
 
 $nextStartCount = $startCount + $batchSize;
-file_put_contents($countFilePath, $nextStartCount);
+file_put_contents($countFile, $nextStartCount);
 
 if ($nextStartCount >= $totalRecords) {
     echo 'All records processed.<br>';
