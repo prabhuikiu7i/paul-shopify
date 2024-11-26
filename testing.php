@@ -125,9 +125,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
 
-					echo "<pre>";
-					print_r($createProductResponse);
-					echo "</pre>";
+					
 					
 					if (isset($createProductResponse['product']['id'])) {
 						$productId = $createProductResponse['product']['id'];
@@ -172,7 +170,10 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 				
 					$newProductData = [
 						"product" => [
-							"title" => $product_title
+							"title" => $product_title,
+							"body_html" => $product['Body (HTML)'],
+							"product_type" => $product['Cat'],
+							"status" => "draft"
 						]
 					];
 
