@@ -43,14 +43,10 @@ function getProductBySKU($product_sku){
 	
 	
 	function insertProduct($newProductData){
-		$insert_product='{
-    "product":{
-        "title":"Hello - Test Product"
-    }
-}';
 		$curl = curl_init();
+
 		curl_setopt_array($curl, array(
-		  CURLOPT_URL => $this->api_url . 'products.json',
+		  CURLOPT_URL => 'https://mr-motorcycles-nz.myshopify.com/admin/api/2024-10/products.json',
 		  CURLOPT_RETURNTRANSFER => true,
 		  CURLOPT_ENCODING => '',
 		  CURLOPT_MAXREDIRS => 10,
@@ -58,13 +54,19 @@ function getProductBySKU($product_sku){
 		  CURLOPT_FOLLOWLOCATION => true,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		  CURLOPT_CUSTOMREQUEST => 'POST',
-		  CURLOPT_POSTFIELDS =>$insert_product,
+		  CURLOPT_POSTFIELDS =>'{
+		    "product":{
+			"title":"Hello - Test Product"
+		    }
+		}',
 		  CURLOPT_HTTPHEADER => array(
-			'Content-Type: application/json',
-			'X-Shopify-Access-Token: '. $this->shopify_token,
+		    'X-Shopify-Access-Token: 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',
+		    'Content-Type: application/json'
 		  ),
 		));
+		
 		$response = curl_exec($curl);
+		
 		curl_close($curl);
 		
 		return json_decode ($response,true);
