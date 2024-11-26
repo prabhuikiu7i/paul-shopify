@@ -43,9 +43,11 @@ function getProductBySKU($product_sku){
 	
 	
 	function insertProduct($newProductData){
-		echo "<pre>";
-		print_r(json_encode($newProductData));
-		echo "</pre>";
+		$insert_product='{
+    "product":{
+        "title":"Hello - Test Product"
+    }
+}';
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 		  CURLOPT_URL => $this->api_url . 'products.json',
@@ -56,7 +58,7 @@ function getProductBySKU($product_sku){
 		  CURLOPT_FOLLOWLOCATION => true,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		  CURLOPT_CUSTOMREQUEST => 'POST',
-		  CURLOPT_POSTFIELDS =>json_encode($newProductData),
+		  CURLOPT_POSTFIELDS =>$insert_product,
 		  CURLOPT_HTTPHEADER => array(
 			'Content-Type: application/json',
 			'X-Shopify-Access-Token: '. $this->shopify_token,
