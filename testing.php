@@ -159,8 +159,6 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
 
-					
-					
 					if (isset($createProductResponse['product']['id'])) {
 						$productId = $createProductResponse['product']['id'];
 						$newVariantData = [
