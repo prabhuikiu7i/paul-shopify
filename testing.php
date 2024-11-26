@@ -63,7 +63,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			 $last_part = $sku_parts[4];
 		}
 
-			$imageSrcArray = $product['Image Src'];
+		$imageSrcArray = $product['Image Src'];
 			$base64Images = [];  
 			$imageFilenames = [];
 			foreach ($imageSrcArray as $imageSrc) {
@@ -136,8 +136,8 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			}
 		} else {
 			echo "Product does not exist: $product_title <br>";
-			
-			if($processed_sku && strpos($product_sku, $processed_sku) !== false) {
+			$count_variants = substr_count($product_sku, $processed_sku);
+			if($processed_sku && strpos($product_sku, $processed_sku)  !== false && $count_variants > 1) {
 				echo "It has variants: $product_title ($product_sku)<br>";
 				
 				$newProductData = [
