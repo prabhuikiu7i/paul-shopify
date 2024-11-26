@@ -43,7 +43,9 @@ function getProductBySKU($product_sku){
 	
 	
 	function insertProduct($newProductData){
-		
+		echo "<pre>";
+		print_r($newProductData);
+		echo "</pre>";
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 		  CURLOPT_URL => $this->api_url . 'products.json',
