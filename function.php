@@ -56,8 +56,9 @@ function getProductBySKU($product_sku){
 		  CURLOPT_CUSTOMREQUEST => 'POST',
 		  CURLOPT_POSTFIELDS =>json_encode($newProductData),
 		  CURLOPT_HTTPHEADER => array(
-		    'X-Shopify-Access-Token: '. $this->shopify_token,
-		    'Content-Type: application/json'
+		    'Content-Type: application/json',
+		    'X-Shopify-Access-Token: '. $this->shopify_token
+		    
 		  ),
 		));
 		
