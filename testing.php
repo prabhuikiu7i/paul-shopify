@@ -117,7 +117,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 				$newProductData = [
 						"product" => [
 							"title" => $product_title,
-							"body_html" => "Hello",
+							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
 							"status" => "draft"
 						]
@@ -173,7 +173,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 					$newProductData = [
 						"product" => [
 							"title" => $product_title,
-							"body_html" => $product['Body (HTML)'],
+							"body_html" => "<p>Hellio</p>",
 							"product_type" => $product['Cat'],
 							"status" => "draft"
 						]
