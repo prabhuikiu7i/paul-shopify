@@ -54,11 +54,7 @@ function getProductBySKU($product_sku){
 		  CURLOPT_FOLLOWLOCATION => true,
 		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		  CURLOPT_CUSTOMREQUEST => 'POST',
-		  CURLOPT_POSTFIELDS =>'{
-		    "product":{
-			"title":"Hello - Test Product"
-		    }
-		}',
+		  CURLOPT_POSTFIELDS =>json_encode($newProductData),
 		  CURLOPT_HTTPHEADER => array(
 		    'X-Shopify-Access-Token: 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',
 		    'Content-Type: application/json'
