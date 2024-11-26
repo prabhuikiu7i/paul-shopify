@@ -42,6 +42,16 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 		$product_sku = $product['SKU'];
 		$product_qty = $product['Qty'];
 
+		if (empty($product_sku)) {
+			$logEntries[] = [
+				"status" => "Missing SKU",
+				"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+				"title" => $product_title,
+				"message" => "No SKU provided for this product.",
+			];
+			continue; 
+		}
+
 		$sku_parts = explode('-', $product_sku);
 		$processed_sku = '';
 		$last_part = '';
@@ -54,18 +64,20 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			 $last_part = $sku_parts[4];
 		}
 
-			/*$imageSrcArray = $product['Image Src']; 
-			foreach($imageSrcArray as $imageURL){
-				$fileName = basename(parse_url($imageURL, PHP_URL_PATH));
-
-				$imageContent = file_get_contents($imageURL);
-					
-				if ($imageContent !== false) {
-					$base64Image = base64_encode($imageContent);
+			$imageSrcArray = $product['Image Src'];
+			$base64Images = [];  
+			$imageFilenames = [];
+			foreach ($imageSrcArray as $imageSrc) {
+				$fileName = basename($imageSrc);
+				$imageData = file_get_contents($imageSrc);
+				if ($imageData !== false) {
+					$base64Encoded = base64_encode($imageData);
+					$base64Images[] = $base64Encoded;
+					$imageFilenames[] = $fileName;
 				} else {
-					echo "Failed to retrieve the image.";
+					$base64Images[] = 'Image could not be fetched: ' . $imageSrc;
 				}
-			}*/
+			}
 
 		$getProductBySKU = $ShopifyProduct->getProductBySKU($product_sku);
 
@@ -76,6 +88,15 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			$product_id = $getProductBySKU['data']['productVariants']['edges'][0]['node']['product']['id'];
 			$parts = explode('/', $product_id);
 			$productId = end($parts);
+
+			if (empty($productId)) {
+				$logEntries[] = [
+					"status" => "Product ID Missing",
+					"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+					"product_title" => $getProductBySKU['data']['productVariants']['edges'][0]['node']['product']['title'],
+					"message" => "Failed to extract product ID from Shopify response.",
+				];
+			}
 
 			$getProductByID = $ShopifyProduct->getProductByID($productId);
 				
@@ -107,6 +128,12 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 						break;
 					}
 				}
+			}else {
+				$logEntries[] = [
+					"status" => "Product or Variants Missing",
+					"sku" => $product_sku,
+					"message" => "Either product ID or variants are missing.",
+				];
 			}
 		} else {
 			echo "Product does not exist: $product_title <br>";
@@ -119,9 +146,17 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"title" => $product_title,
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
-							"status" => "draft"
+							"status" => "draft",
+							"images" => []
 						]
 					];
+
+					foreach ($base64Images as $index => $base64Image) {
+						$newProductData['product']['images'][] = [
+							"attachment" => $base64Image, 
+							"filename" => $imageFilenames[$index]  
+						];
+					}
 
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
 
@@ -145,7 +180,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 						if (isset($createVariantResponse['variant']['inventory_item_id'])){
 							
 							$inventory_item_id = $createVariantResponse['variant']['inventory_item_id'];
-							$locationid = '61176086681';
+							$locationId = '61176086681';
 							
 							$variantStock = [
 								"location_id" => $locationId,
@@ -173,17 +208,20 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"title" => $product_title,
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
-							"status" => "draft"
+							"status" => "draft",
+							"images" => []
 						]
 					];
 
+					foreach ($base64Images as $index => $base64Image) {
+						$newProductData['product']['images'][] = [
+							"attachment" => $base64Image, 
+							"filename" => $imageFilenames[$index]  
+						];
+					}
 
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
 
-					echo "<pre>";
-					print_r($createProductResponse);
-					echo "</pre>";
-					
 					if(isset($createProductResponse['product']['id'])) {
 						$productId = $createProductResponse['product']['id'];
 						
@@ -201,15 +239,25 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 								];
 
 								$productPriceResponse = $ShopifyProduct->saveProductPrice($productPrice, $variant_id);   
-								echo "<pre>";
-								print_r($productPriceResponse);
-								echo "</pre>";
 							}
 						} else {
-							echo "No variants found!";
+							$logEntries[] = [
+								"status" => "No Variants Found",
+								"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+								"sku" => $product_sku,
+								"product_id" => $productId,
+								"message" => "Product created but no variants were returned.",
+							];
 						}
 					} else {
-						echo "Product ID not found!";
+						$logEntries[] = [
+							"status" => "Product ID not found!",
+							"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+							"sku" => $product_sku,
+							"title" => $product_title,
+							"response" => $createProductResponse,
+							"message" => "Product creation failed or Product ID is not returned.",
+						];
 					}
 
 					$logEntries[] = [
