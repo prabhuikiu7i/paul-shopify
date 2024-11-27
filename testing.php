@@ -2,20 +2,10 @@
 require "function.php";
 
 $ShopifyProduct = new ShopifyProduct();
-$currentDateTime = new DateTime("now", new DateTimeZone("Asia/Kolkata"));
+$currentDateTime = new DateTime("now", new DateTimeZone("Pacific/Auckland"));
 
 $array_data = $ShopifyProduct->get_product_data();
 
-$countFile = 'count.txt';
-
-if (file_exists($countFile)) {
-    $latestAuditLog = file_get_contents($countFile);
-    $startCount = $latestAuditLog ? (int)$latestAuditLog : 0;
-} else {
-    $startCount = 0;
-}
-
-$batchSize = 200;
 $totalRecords = count($array_data);
 
 if ($totalRecords == 0) {
@@ -31,12 +21,8 @@ if ($totalRecords == 0) {
     exit;
 }
 
-$endCount = $startCount + $batchSize;
-$batchToProcess = array_slice($array_data, $startCount, $batchSize);
 
-	$counter = 0;
-	$productPriceResponse = 0;
-	foreach($batchToProcess as $product){
+	foreach($array_data as $product){
 		$product_title = $product['ItemName'];   
 		$product_sku = $product['SKU'];
 		$product_qty = $product['Qty'];
@@ -74,10 +60,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			$matched_sku = implode('-', array_slice($sku_parts, 0, 4));
 			
 		}
-			// $imageSrcArray = $product['Image Src'];
-			$imageSrcArray =[
-					"https://cdn.shopify.com/s/files/1/0667/5690/3078/files/10003-000.jpg",
-				];
+			$imageSrcArray = $product['Image Src'];
 			$images = [];
 			foreach ($imageSrcArray as $imageSrc) {
 				$fileName = basename($imageSrc);  
@@ -335,9 +318,3 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 		 file_put_contents('logs.txt', $logEntries, FILE_APPEND);
 }
 
-$nextStartCount = $startCount + $batchSize;
-file_put_contents($countFile, $nextStartCount);
-
-if ($nextStartCount >= $totalRecords) {
-    echo 'All records processed.<br>';
-}
