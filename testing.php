@@ -16,18 +16,19 @@ if (file_exists($countFile)) {
     $startCount = 0;
 }
 
-$batchSize = 3;
+$batchSize = 15;
 $totalRecords = count($array_data);
 
 if ($totalRecords == 0) {
-	$logEntries = [
-        [
-            "status" => "No records available.",
-            "timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
-        ]
-    ];
+	$logEntries =
+				"======================= No records available ! =======================\n" .
+					$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+					json_encode([
+						"status" => "No records available."
+					]) .
+				"\n=====================================================================\n";
 
-	file_put_contents('logs.txt', json_encode($logEntries, JSON_PRETTY_PRINT));
+	file_put_contents('logs.txt',$logEntries, FILE_APPEND);
     exit;
 }
 
@@ -42,12 +43,15 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 		$product_qty = $product['Qty'];
 
 		if (empty($product_sku)) {
-			$logEntries[] = [
-				"status" => "Missing SKU",
-				"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
-				"title" => $product_title,
-				"message" => "No SKU provided for this product.",
-			];
+			$logEntries =
+						"======================= Missing SKU ! =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Missing SKU !",
+								"title" => $product_title,
+								"message" => "No SKU provided for this product.",
+							]) .
+						"\n=====================================================================\n";
 			continue; 
 		}
 
@@ -63,10 +67,8 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			 $last_part = $sku_parts[4];
 		}
 
-			$imageSrcArray =  $product['Image Src'];
-			
+			$imageSrcArray = $product['Image Src'];
 			$images = [];
-			
 			foreach ($imageSrcArray as $imageSrc) {
 				$fileName = basename($imageSrc);  
 				$imageData = file_get_contents($imageSrc); 
@@ -78,10 +80,14 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 						"attachment" => $base64Encoded
 					];
 				} else {
-					$logEntries[] = [
-						"status" => "Image could not be fetched.",
-						"message" => "Image could not be fetched: " . $imageSrc,
-					];
+					$logEntries =
+							"======================= Image could not be fetched ! =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Image could not be fetched.",
+								"message" => "Image could not be fetched: " . $imageSrc
+							]) .
+							"\n=====================================================================\n";
 				}
 			} 
 	
@@ -96,12 +102,15 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			$productId = end($parts);
 
 			if (empty($productId)) {
-				$logEntries[] = [
-					"status" => "Product ID Missing",
-					"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
-					"product_title" => $getProductBySKU['data']['productVariants']['edges'][0]['node']['product']['title'],
-					"message" => "Failed to extract product ID from Shopify response.",
-				];
+				$logEntries =
+						"======================= Product ID Missing ! =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Product ID Missing !",
+								"product_title" => $getProductBySKU['data']['productVariants']['edges'][0]['node']['product']['title'],
+								"message" => "Failed to extract product ID from Shopify response."
+							]) .
+						"\n=====================================================================\n";
 			}
 
 			$getProductByID = $ShopifyProduct->getProductByID($productId);
@@ -123,23 +132,29 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 
 						$updateStockResponse = $ShopifyProduct->updateStockIfProductExist($variantStock);
 
-						$logEntries[] = [
-							"status" => "Stock Updated Successfully.",
-							"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
-							"sku" => $product_sku,
-							"inventory_item_id" => $inventoryItemId,
-							"response" => $updateStockResponse
-						];
-
+						$logEntries =
+							"======================= Stock Update Log =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Stock Updated Successfully.",
+								"sku" => $product_sku,
+								"inventory_item_id" => $inventoryItemId,
+								"response" => $updateStockResponse
+							]) .
+							"\n=====================================================================\n";
 						break;
 					}
 				}
 			}else {
-				$logEntries[] = [
-					"status" => "Product or Variants Missing",
-					"sku" => $product_sku,
-					"message" => "Either product ID or variants are missing.",
-				];
+				$logEntries =
+							"======================= Product or Variants Missing =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Product or Variants Missing",
+								"sku" => $product_sku,
+								"message" => "Either product ID or variants are missing.",
+							]) .
+							"\n=====================================================================\n";
 			}
 		} else {
 			echo "Product does not exist: $product_title <br>";
@@ -186,15 +201,19 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							];
 							$addVariantStockResponse = $ShopifyProduct->addVariantStock($variantStock);
 							
-							$logEntries[] = [
-								"status" => "Variant Created",
-								"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+							$logEntries =
+							"======================= Variant Created Successfully =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Variant Created Successfully.",
 								"title" => $product_title,
 								"sku" => $product_sku,
 								"product_id" => $productId,
 								"variant_response" => $createVariantResponse,
 								"stock_update_response" => $addVariantStockResponse
-							];
+							]) .
+							"\n=====================================================================\n";
+
 						}
 					}
 			} else {
@@ -230,38 +249,46 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 								$productPriceResponse = $ShopifyProduct->saveProductPrice($productPrice, $variant_id);   
 							}
 						} else {
-							$logEntries[] = [
-								"status" => "No Variants Found",
-								"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
+							$logEntries =
+							"======================= No Variants Found ! =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "No Variants Found !",
 								"sku" => $product_sku,
 								"product_id" => $productId,
 								"message" => "Product created but no variants were returned.",
-							];
+							]) .
+							"\n=====================================================================\n";
 						}
 					} else {
-						$logEntries[] = [
-							"status" => "Product ID not found!",
-							"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
-							"sku" => $product_sku,
-							"title" => $product_title,
-							"response" => $createProductResponse,
-							"message" => "Product creation failed or Product ID is not returned.",
-						];
+						$logEntries =
+							"======================= Product ID not found ! =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Product ID not found !",
+								"sku" => $product_sku,
+								"title" => $product_title,
+								"response" => $createProductResponse,
+								"message" => "Product creation failed or Product ID is not returned.",
+							]) .
+							"\n=====================================================================\n";
 					}
 
-					$logEntries[] = [
-						"status" => "Single Product Created Successfully.",
-						"timestamp" => $currentDateTime->format("Y-m-d H:i:s"),
-						"sku" => $product_sku,
-						"product_id" => $productId,
-						"response" => $createProductResponse,
-						"Product Price" => $productPriceResponse,
-					];
+					$logEntries =
+							"======================= Single Product Created Successfully. =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
+							json_encode([
+								"status" => "Single Product Created Successfully.",
+								"sku" => $product_sku,
+								"product_id" => $productId,
+								"response" => $createProductResponse,
+								"Product Price" => $productPriceResponse,
+							]) .
+							"\n=====================================================================\n";
 			}
 		}
+		file_put_contents('logs.txt', $logEntries, FILE_APPEND);
 }
-
-file_put_contents('logs.txt', json_encode($logEntries, JSON_PRETTY_PRINT) . PHP_EOL, FILE_APPEND);
 
 $nextStartCount = $startCount + $batchSize;
 file_put_contents($countFile, $nextStartCount);
