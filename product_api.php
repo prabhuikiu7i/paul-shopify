@@ -1,5 +1,6 @@
 <?php
-//add get products 
+
+
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
