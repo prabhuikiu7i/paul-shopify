@@ -4,8 +4,7 @@ require "function.php";
 $ShopifyProduct = new ShopifyProduct();
 $currentDateTime = new DateTime("now", new DateTimeZone("Asia/Kolkata"));
 
-$data = file_get_contents('crownkiwi-api.jsp.json');
-$array_data = json_decode($data,true);
+$array_data = $ShopifyProduct->get_product_data();
 
 $countFile = 'count.txt';
 
@@ -58,16 +57,27 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 		$sku_parts = explode('-', $product_sku);
 		$processed_sku = '';
 		$last_part = '';
-		
+		$matched_sku = '';
+
 		if (count($sku_parts) === 4) {
 			$processed_sku = implode('-', array_slice($sku_parts, 0, 3));
 			$last_part = $sku_parts[3];
 		} elseif (count($sku_parts) === 5) {
 			$processed_sku = implode('-', array_slice($sku_parts, 0, 4));
-			 $last_part = $sku_parts[4];
+			$last_part = $sku_parts[4];
 		}
 
-			$imageSrcArray = $product['Image Src'];
+		if (count($sku_parts) === 4) {
+			$matched_sku = implode('-', array_slice($sku_parts, 0, 3));
+		
+		} elseif (count($sku_parts) === 5) {
+			$matched_sku = implode('-', array_slice($sku_parts, 0, 4));
+			
+		}
+			// $imageSrcArray = $product['Image Src'];
+			$imageSrcArray =[
+					"https://cdn.shopify.com/s/files/1/0667/5690/3078/files/10003-000.jpg",
+				];
 			$images = [];
 			foreach ($imageSrcArray as $imageSrc) {
 				$fileName = basename($imageSrc);  
@@ -158,49 +168,46 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 			}
 		} else {
 			echo "Product does not exist: $product_title <br>";
-			$count_variants = substr_count($product_sku, $processed_sku);
-			if($processed_sku && strpos($product_sku, $processed_sku)  !== false && $count_variants > 1) {
-				echo "It has variants: $product_title ($product_sku)<br>";
+			if ($processed_sku !== '' && $matched_sku !== '' && $processed_sku === $matched_sku) {
+			 	echo "It has variants: $product_title ($product_sku)<br>";
 				
-				$newProductData = [
+				$existingProduct = $ShopifyProduct->searchProductByTitle($product_title);
+				
+				$products=$existingProduct['products'];
+				if (empty($products)) {
+				
+					$newProductData = [
 						"product" => [
 							"title" => $product_title,
 							"body_html" => $product['Body (HTML)'],
 							"product_type" => $product['Cat'],
 							"status" => "draft",
-							"images" => $images
+							"images" => $images,
+							"variants" => [
+								[
+									"sku" => $product_sku,
+									"title" => $last_part,
+									"price" => $product['rrp'],
+									"option1" => $last_part,
+									"cost" => $product['Cost'],
+									"inventory_management" => "shopify"
+								]
+							]
 						]
 					];
 					
 					$createProductResponse = $ShopifyProduct->insertProduct($newProductData);
-
-					if (isset($createProductResponse['product']['id'])) {
-						$productId = $createProductResponse['product']['id'];
-						$newVariantData = [
-							"variant" => [
-								"sku" => $product_sku,	
-								"title" => $last_part,
-								"price" => $product['rrp'],
-								"inventory_quantity" => $product['Qty'],
-								"product_id" => $productId,
-								"option1" => $last_part,
-								"cost" => $product['Cost']
-							]
-						];
-				
-						$createVariantResponse = $ShopifyProduct->saveVariant($newVariantData,$productId);
-						if (isset($createVariantResponse['variant']['inventory_item_id'])){
-							
-							$inventory_item_id = $createVariantResponse['variant']['inventory_item_id'];
-							$locationId = '61176086681';
-							
+					
+   						$inventory_item_id = $createProductResponse['product']['variants'][0]['inventory_item_id'];
+						$locationId = '61176086681';
+	
 							$variantStock = [
 								"location_id" => $locationId,
 								"inventory_item_id" => $inventory_item_id,
 								"available" => $product_qty
 							];
 							$addVariantStockResponse = $ShopifyProduct->addVariantStock($variantStock);
-							
+
 							$logEntries =
 							"======================= Variant Created Successfully =======================\n" .
 							$currentDateTime->format("Y-m-d H:i:s") . "\n" .
@@ -208,16 +215,54 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 								"status" => "Variant Created Successfully.",
 								"title" => $product_title,
 								"sku" => $product_sku,
-								"product_id" => $productId,
-								"variant_response" => $createVariantResponse,
+								"product_respone" => $createProductResponse,
 								"stock_update_response" => $addVariantStockResponse
 							]) .
 							"\n=====================================================================\n";
+					
+				}else{
+        			$productId = $existingProduct['products'][0]['id'];
+					$newVariantData = [
+						"variant" => [
+							"sku" => $product_sku,  
+							"title" => $last_part,  
+							"price" => $product['rrp'],
+							"inventory_quantity" => $product['Qty'],
+							"product_id" => $productId,
+							"option1" => $last_part,  
+							"cost" => $product['Cost']
+						]
+					];
 
+					$createVariantResponse = $ShopifyProduct->saveVariant($newVariantData, $productId);
+			
+					if (isset($createVariantResponse['variant']['inventory_item_id'])) {
+						$inventory_item_id = $createVariantResponse['variant']['inventory_item_id'];
+						$locationId = '61176086681'; 
+						
+						$variantStock = [
+							"location_id" => $locationId,
+							"inventory_item_id" => $inventory_item_id,
+							"available" => $product_qty
+						];
+						
+						$addVariantStockResponse = $ShopifyProduct->addVariantStock($variantStock);
+
+						$logEntries = "======================= Variant Created Successfully =======================\n" .
+							$currentDateTime->format("Y-m-d H:i:s") . "\n" . 
+							json_encode([
+								"status" => "Variant Created Successfully.",
+								"title" => $product_title,
+								"sku" => $product_sku,
+								"product_id" => $productId,
+								"variant_response" => $createVariantResponse,
+								"stock_update_response" => $addVariantStockResponse
+							]) . 
+							"\n=====================================================================\n";
 						}
-					}
-			} else {
-				echo "single product: $product_title ($product_sku)<br>";
+				}
+			 } else {
+			 	echo "single product: $product_title ($product_sku)<br>";
 				
 					$newProductData = [
 						"product" => [
@@ -287,7 +332,7 @@ $batchToProcess = array_slice($array_data, $startCount, $batchSize);
 							"\n=====================================================================\n";
 			}
 		}
-		file_put_contents('logs.txt', $logEntries, FILE_APPEND);
+		 file_put_contents('logs.txt', $logEntries, FILE_APPEND);
 }
 
 $nextStartCount = $startCount + $batchSize;

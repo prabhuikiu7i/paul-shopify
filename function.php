@@ -4,8 +4,27 @@ class  ShopifyProduct{
 private $api_url = 'https://mr-motorcycles-nz.myshopify.com/admin/api/2024-10/';
 private $shopify_token = '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';
 
+	function get_product_data(){
 
-function getProductBySKU($product_sku){
+		$curl = curl_init();
+		curl_setopt_array($curl, array(
+		CURLOPT_URL => 'https://www.crownkiwi.co.nz/api.jsp?user=D140-W&inventory=download&payload=full',
+		CURLOPT_RETURNTRANSFER => true,
+		CURLOPT_ENCODING => '',
+		CURLOPT_MAXREDIRS => 10,
+		CURLOPT_TIMEOUT => 0,
+		CURLOPT_FOLLOWLOCATION => true,
+		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		CURLOPT_CUSTOMREQUEST => 'GET',
+		));
+		$response = curl_exec($curl);
+		curl_close($curl);
+
+		return json_decode ($response,true);
+	}
+
+
+	function getProductBySKU($product_sku){
 		
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
@@ -38,7 +57,7 @@ function getProductBySKU($product_sku){
 		$curl = curl_init();
 
 		curl_setopt_array($curl, array(
-		  CURLOPT_URL => 'https://mr-motorcycles-nz.myshopify.com/admin/api/2024-10/products.json',
+		  CURLOPT_URL => $this->api_url . 'products.json',
 		  CURLOPT_RETURNTRANSFER => true,
 		  CURLOPT_ENCODING => '',
 		  CURLOPT_MAXREDIRS => 10,
@@ -49,7 +68,7 @@ function getProductBySKU($product_sku){
 		  CURLOPT_POSTFIELDS =>json_encode($newProductData),
 		  CURLOPT_HTTPHEADER => array(
 		    'Content-Type: application/json',
-		    'X-Shopify-Access-Token: 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'
+		    'X-Shopify-Access-Token: '. $this->shopify_token,
 		    
 		  ),
 		));
@@ -234,6 +253,27 @@ function getProductBySKU($product_sku){
 		curl_close($curl);
 		
 		return json_decode($response,true);
+	}
 
+	function searchProductByTitle($product_title){
+		$curl = curl_init();
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => $this->api_url . 'products.json?title=' . urlencode($product_title),
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => '',
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 0,
+		  CURLOPT_FOLLOWLOCATION => true,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => 'GET',
+		  CURLOPT_HTTPHEADER => array(
+			'Content-Type: application/json',
+			'X-Shopify-Access-Token: '. $this->shopify_token,
+		  ),
+		));
+		$response = curl_exec($curl);
+		curl_close($curl);
+
+		return json_decode($response,true);
 	}
 }
