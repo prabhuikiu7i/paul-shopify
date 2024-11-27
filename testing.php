@@ -15,7 +15,7 @@ if (file_exists($countFile)) {
     $startCount = 0;
 }
 
-$batchSize = 15;
+$batchSize = 200;
 $totalRecords = count($array_data);
 
 if ($totalRecords == 0) {
